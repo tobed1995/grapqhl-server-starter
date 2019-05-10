@@ -38,12 +38,12 @@ const ProductController = {
      * @param productImage - image of the product
      */
     createProduct: async (
-        topicNames: string[],
+        topic: string[],
         stock: number,
         name: string,
         description: string,
         price: number,
-        categories: number[],
+        categories: string[],
         gender: string,
         productImage: any
     ) => {
@@ -55,7 +55,7 @@ const ProductController = {
             )
             img.save()
         }
-        const topic = ProductController.topicByName(topicNames)
+        // const topic = ProductController.topicByName(topicNames)
         const product = new Product({
             topic,
             stock,
@@ -98,7 +98,7 @@ const ProductController = {
         name: string,
         description: string,
         price: number,
-        categories: number[],
+        categories: string[],
         gender: string,
         productImage: any
     ) => {

@@ -9,7 +9,7 @@ export interface IProduct {
     name: string
     description: string
     price: number
-    categories: number[]
+    categories: any
     gender: string
     img: any
 }

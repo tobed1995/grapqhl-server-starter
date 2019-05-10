@@ -6,24 +6,24 @@ import { gql } from 'apollo-server-express'
 const productMutation = gql`
     extend type Mutation {
         createProduct(
-            topic: [String!]
+            topic: [ID!]
             stock: Int
             name: String!
             description: String!
             price: Int!
-            categories: [Int]
+            categories: [ID]
             gender: Gender
             img: Upload
         ): Product!
         deleteProduct(id: ID!): Boolean!
         updateProduct(
-            topic: [String!]
+            topic: [ID!]
             stock: Int
             id: ID!
             name: String
             description: String
             price: Int
-            categories: [Int]
+            categories: [ID]
             gender: Gender
             img: Upload
         ): Product!
